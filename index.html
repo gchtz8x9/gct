@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS制作TAG标签云文字动画特效 - 站长素材</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<script type="text/javascript" src="tagcloud.js"></script>
+
+<style type="text/css">
+.fl{ float: left; }
+.fr{ float: right; }
+.wrapper{ width: 1200px; height: 300px; margin: 0 auto; }
+.wrapper p{ padding-top: 150px; line-height: 27px; color: #999; font-size: 14px; text-align: center;  }
+.tagcloud { position: relative; margin-top:-150px; }
+.tagcloud a{ position: absolute;  top: 0; left: 0;  display: block; padding: 11px 30px; color: #333; font-size: 16px; border: 1px solid #e6e7e8; border-radius: 18px; background-color: #f2f4f8; text-decoration: none; white-space: nowrap;
+  -o-box-shadow: 6px 4px 8px 0 rgba(151,142,136,.34);
+  -ms-box-shadow: 6px 4px 8px 0 rgba(151,142,136,.34);
+  -moz-box-shadow: 6px 4px 8px 0 rgba(151,142,136,.34);
+  -webkit-box-shadow: 6px 4px 8px 0 rgba(151,142,136,.34);
+  box-shadow: 6px 4px 8px 0 rgba(151,142,136,.34);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=4,Direction=135, Color='#000000')";/*兼容ie7/8*/
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=125, Strength=9);
+  /*strength是阴影大小，direction是阴影方位，单位为度，可以为负数，color是阴影颜色 （尽量使用数字）使用IE滤镜实现盒子阴影的盒子必须是行元素或以行元素显示（block或inline-block;）*/
+}
+.tagcloud a:hover{ color: #3385cf; }
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <p>左边展示成果<br/>右边组员名单</p>
+    <div class="tagcloud fl">
+      <a href="#">31省份一季度GDP排名</a>
+      <a href="#">长沙塌楼近88小时后救出第9名被困者</a>
+      <a href="#">上海新增本土“274+5395” 死亡20例</a>
+      <a href="#">北京12个区域将开展3天3轮核酸</a>
+      <a href="#">媒体：马某某被杭州国安局采取措施</a>
+      <a href="#">各地楼市松绑井喷：首付降至2成</a>
+      <a href="#">胡锡进：杭州国安抓的不是“马某”</a>
+      <a href="#"> 长沙塌楼为何不“揭盖子”救？</a>
+      <a href="#">副校长殴打女教师 包头通报</a>
+      <a href="#">乌克兰总统称将恢复领土完整</a>
+      <a href="#">独身男子去世舅舅无法继承房产</a>
+      <a href="#">31省份昨新增本土“368+5647”</a>
+      <a href="#">冷空气再来袭 全国多地将迎降温</a>
+      <a href="#">13人火锅店消费1000元陆续离开逃单</a>
+      <a href="#">北京新增62例感染者</a>
+      <a href="#">美国70多门M777榴弹炮运抵乌克兰</a>
+      <a href="#">日宣称在长崎以西海域发现辽宁舰</a>
+      <a href="#">女子给老公所有女性朋友群发我想你</a>
+      <a href="#">想大口喝矿泉水的女孩成功获救</a>
+      <a href="#">福建籍外卖员在纽约送餐途中被枪杀</a>
+      <a href="#">港股阿里巴巴跌幅收窄 此前跌超9% </a>
+      <a href="#">三只松鼠2年关店300家</a>
+      <a href="#">航拍浙江2200余名师生深夜转运</a>
+      <a href="#">网红店的没落 从无人排队开始</a>
+      <a href="#">上海5人因错转未死亡老人被问责</a>
+      <a href="#">超市卖仰泳鲈鱼2条15元：保证活的</a>
+      <a href="#">10岁娃用牙洞修复牙膏后损失6颗牙</a>
+      <a href="#">谷爱凌连续两年参加Met Gala</a>
+      <a href="#">西安大雁塔游客爆满</a>
+      <a href="#">兰州野生动物园观光车侧翻2人死亡</a>
+      <a href="#">上海抑郁症患者找药群解散</a>
+    </div>
+    <div class="tagcloud fr">
+	  <a href="#">郭呈涛</a>
+      <a href="#">何威龙</a>
+      <a href="#">张赛鹏</a>
+      <a href="#">刘晓桦</a>
+
+    </div>
+</div><!--wrapper-->
+
+<script type="text/javascript">
+    /*3D标签云*/
+    tagcloud({
+        selector: ".tagcloud",  //元素选择器
+        fontsize: 16,       //基本字体大小, 单位px
+        radius: 100,         //滚动半径, 单位px
+        mspeed: "normal",   //滚动最大速度, 取值: slow, normal(默认), fast
+        ispeed: "normal",   //滚动初速度, 取值: slow, normal(默认), fast
+        direction: 135,     //初始滚动方向, 取值角度(顺时针360): 0对应top, 90对应left, 135对应right-bottom(默认)...
+        keep: false          //鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动
+    });
+</script>
+
+<div style="text-align:center;margin:150px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+</div>
+</body>
+</html>
